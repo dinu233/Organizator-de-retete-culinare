@@ -1,0 +1,10 @@
+# Ignora PyCharm specific files
+.idea/
+
+# Ignora folderul mediului virtual
+venv/
+*.venv/
+
+# Ignora fisierele compilate
+__pycache__/
+*.pyc
