@@ -1,4 +1,6 @@
-# Lista principală de rețete
+# retete.py
+# Colegul 1 – gestionarea rețetelor
+
 retete = []
 
 
@@ -34,21 +36,3 @@ def editeaza_reteta(nume, nume_nou=None, categorie_noua=None, ingrediente_noi=No
                 reteta["instructiuni"] = instructiuni_noi
             return reteta
     return None
-
-
-# Opțional — salvare și încărcare din fișier JSON
-import json
-
-def salveaza_in_fisier(nume_fisier="retete.json"):
-    with open(nume_fisier, "w", encoding="utf-8") as f:
-        json.dump(retete, f, indent=4, ensure_ascii=False)
-
-
-def incarca_din_fisier(nume_fisier="retete.json"):
-    global retete
-    try:
-        with open(nume_fisier, "r", encoding="utf-8") as f:
-            retete = json.load(f)
-    except FileNotFoundError:
-        retete = []
-
